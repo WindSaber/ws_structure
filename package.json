@@ -1,9 +1,7 @@
 {
-  "bin": {
-    "ws_structure": "bin/index.js"
-  },
+  "bin": "bin/index.js",
   "name": "ws_structure",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Project created to help users to create some basic structures. As Basic React setup or API",
   "main": "bin/index.js",
   "publishConfig": {
@@ -29,6 +27,7 @@
     "boxen": "^4.0.0",
     "chalk": "^2.4.2",
     "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.4",
     "node-fs-extra": "^0.8.2"
   }
 }
