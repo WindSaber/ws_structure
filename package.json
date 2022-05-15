@@ -1,7 +1,7 @@
 {
   "bin": "bin/index.js",
   "name": "ws_structure",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "Project created to help users to create some basic structures. As Basic React setup or API",
   "main": "bin/index.js",
   "publishConfig": {
