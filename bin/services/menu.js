@@ -1,7 +1,7 @@
 const boxen = require("boxen");
 const chalk = require("chalk");
 const inquirer = require('inquirer');
-const {I18NEXT} = require('../lib/constants/opciones.constants');
+const {I18NEXT, ZUSTAND, SMACSS, DATEPICKER, HELMET, AXIOS, ANIMATE, TIPPY} = require('../constants/opciones.constants');
 
 const showBanner = () => console.log(boxen(`${chalk.green.bold(' '.repeat(30) + 'WS Structure' + ' '.repeat(30))}
 Este paquete fue desarrollado por ${chalk.green.bold('@windsaber')} para ayudarme con la tarea
@@ -15,14 +15,16 @@ repetitiva de copiar archivos cada vez que inicio un nuevo proyecto`, {
 const getOpciones = async () => {
     return new Promise(resolve => {
         const choices = [
-            // new inquirer.Separator(' = Opciones Generales = '),
+            new inquirer.Separator(' === Opciones Generales === '),
             {value: I18NEXT, name: 'i18next', checked: true},
-            {value: 'zustand', name: 'Zustand', checked: true},
-            {value: 'axios', name: 'axios', checked: true},
-            {value: 'api_ex', name: 'Ejemplo de API'},
-            {value: 'b_styles', name: 'Styles básicos basados en SMACSS'},
-            {value: 'datepicker', name: 'Datepicker'},
-            {value: 'helmet', name: 'React Helmet'},
+            {value: ZUSTAND, name: 'Zustand', checked: true},
+            {value: AXIOS, name: 'axios', checked: true},
+            {value: SMACSS, name: 'Styles básicos basados en SMACSS'},
+            {value: DATEPICKER, name: 'Datepicker'},
+            {value: HELMET, name: 'React Helmet'},
+            new inquirer.Separator(' === Librerías secundarias === '),
+            {value: TIPPY, name: 'Tippy (para los tooltips)', checked: true},
+            {value: ANIMATE, name: 'Animate.css', checked: true},
         ];
 
         inquirer.prompt({

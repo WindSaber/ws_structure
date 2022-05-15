@@ -1,13 +1,20 @@
 #!/usr/bin/env node
 
-const {reiniciaMenu} = require('./menu');
-const {creaEstructuraIndex} = require('../lib/structures/index.structure');
-const {instalador} = require('./npm.helper');
+const {reiniciaMenu} = require('./services/menu');
+const {creaEstructuraIndex} = require('./structures/index.structure');
+const {instalador} = require('./services/instalador');
+const {rollback} = require('./services/rollback');
 
+reiniciaMenu().then(async opciones => {
+    await creaEstructuraIndex(opciones);
 
-instalador().then(() => {
-    reiniciaMenu().then(r => {
-        console.log(r);
-        creaEstructuraIndex(r);
-    });
+    await rollback(opciones);
 });
+
+//
+// instalador().then(() => {
+//     reiniciaMenu().then(async r => {
+//         await creaEstructuraIndex(r);
+//         console.log("termine");
+//     });
+// });
