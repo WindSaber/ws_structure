@@ -1,0 +1,34 @@
+{
+  "bin": "bin/index.js",
+  "name": "ws_structure",
+  "version": "0.1.2",
+  "description": "Project created to help users to create some basic structures. As Basic React setup or API",
+  "main": "bin/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WindSaber/ws_structure.git"
+  },
+  "keywords": [
+    "inecti"
+  ],
+  "author": "@WindSaber - Omar Nava",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WindSaber/ws_structure/issues"
+  },
+  "homepage": "https://github.com/WindSaber/ws_structure#readme",
+  "dependencies": {
+    "@windsaber/ws_utils": "^1.0.8",
+    "boxen": "^4.0.0",
+    "chalk": "^2.4.2",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.4",
+    "node-fs-extra": "^0.8.2"
+  }
+}
