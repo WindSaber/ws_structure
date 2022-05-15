@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="22ebc773-8b6e-47b3-8db8-fc1aac80c021" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="29BPc49qSDdqsqDdPoSURICNFFw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="$PROJECT_DIR$/../../../../../../Program Files/nodejs/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Len\Documents\repositorios\nodejs\ws_structure" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Len\Documents\repositorios\nodejs\ws_structure\bin\services" />
+      <recent name="C:\Users\Len\Documents\repositorios\nodejs\ws_structure\bin" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22ebc773-8b6e-47b3-8db8-fc1aac80c021" name="Default Changelist" comment="" />
+      <created>1652583581575</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652583581575</updated>
+      <workItem from="1652583582751" duration="10046000" />
+    </task>
+    <task id="LOCAL-00001" summary="Pruebas de instalación">
+      <created>1652583896778</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652583896778</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Primeras generaciones de Index">
+      <created>1652588197041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652588197041</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Generación de Index Listo, es momento para dividir branches">
+      <created>1652642680700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652642680700</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pruebas de instalación" />
+    <MESSAGE value="Primeras generaciones de Index" />
+    <MESSAGE value="Generación de Index Listo, es momento para dividir branches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generación de Index Listo, es momento para dividir branches" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="580" y="108" key="CommitChangelistDialog2" timestamp="1652642679902">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="580" y="108" key="CommitChangelistDialog2/1920.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1652642679902" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1652642683077">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1652642683077" />
+    <state x="566" y="150" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1652642036832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="566" y="150" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1652642036832" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1652642170947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="254" key="run.anything.popup/1920.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1652642170947" />
+  </component>
+</project>
