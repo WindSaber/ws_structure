@@ -5,10 +5,12 @@ const {creaEstructuraEnvs} = require('./structures/envs.structure');
 const {creaEstructuraIndex} = require('./structures/index.structure');
 const {instalador} = require('./services/instalador');
 const {rollback} = require('./services/rollback');
+const {ENVS} = require('./constants/opciones.constants');
 
 reiniciaMenu().then(async opciones => {
     await creaEstructuraIndex(opciones);
-    await creaEstructuraEnvs(opciones);
+    if (opciones.indexOf(ENVS) >= 0)
+        await creaEstructuraEnvs(opciones);
     await rollback(opciones);
 });
 
