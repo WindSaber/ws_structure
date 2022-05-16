@@ -1,5 +1,6 @@
 const ANIMATE = 'animate';
 const AXIOS = 'axios';
+const BASE = 'base';
 const BOOTSTRAP = 'bootstrap';
 const DATEPICKER = 'datepicker';
 const ENVS = 'envs';
@@ -10,5 +11,5 @@ const TIPPY = 'tippy';
 const ZUSTAND = 'zustand';
 
 module.exports = {
-    BOOTSTRAP, I18NEXT, ZUSTAND, HELMET, SMACSS, DATEPICKER, AXIOS, ANIMATE, TIPPY, ENVS
+    BOOTSTRAP, I18NEXT, BASE, ZUSTAND, HELMET, SMACSS, DATEPICKER, AXIOS, ANIMATE, TIPPY, ENVS
 }

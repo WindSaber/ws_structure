@@ -6,12 +6,18 @@ const {creaEstructuraIndex} = require('./structures/index.structure');
 const {instalador} = require('./services/instalador');
 const {rollback} = require('./services/rollback');
 const {ENVS} = require('./constants/opciones.constants');
+const chalk = require("chalk");
 
 reiniciaMenu().then(async opciones => {
-    await creaEstructuraIndex(opciones);
-    if (opciones.indexOf(ENVS) >= 0)
-        await creaEstructuraEnvs(opciones);
-    await rollback(opciones);
+    try{
+        await instalador(opciones);
+        await creaEstructuraIndex(opciones);
+        if (opciones.indexOf(ENVS) >= 0)
+            await creaEstructuraEnvs(opciones);
+        await rollback(opciones);
+    }catch (err) {
+        console.log(chalk.red("Hubo errores....¿Si me estás ejecutando dentro de un proyecto create-react-app verdad? --- mira esto salió en el error\n" + err));
+    }
 });
 
 //

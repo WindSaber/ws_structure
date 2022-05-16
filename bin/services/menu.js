@@ -1,7 +1,7 @@
 const boxen = require("boxen");
 const chalk = require("chalk");
 const inquirer = require('inquirer');
-const {I18NEXT, ZUSTAND, SMACSS, DATEPICKER, HELMET, AXIOS, ANIMATE, TIPPY, ENVS} = require('../constants/opciones.constants');
+const {I18NEXT, BASE, ZUSTAND, SMACSS, DATEPICKER, HELMET, AXIOS, ANIMATE, TIPPY, ENVS} = require('../constants/opciones.constants');
 
 const showBanner = () => console.log(boxen(`${chalk.green.bold(' '.repeat(30) + 'WS Structure' + ' '.repeat(30))}
 Este paquete fue desarrollado por ${chalk.green.bold('@windsaber')} para ayudarme con la tarea
@@ -17,6 +17,7 @@ const getOpciones = async () => {
         const choices = [
             new inquirer.Separator(' === Opciones Generales === '),
             {value: I18NEXT, name: 'i18next', checked: true},
+            {value: BASE, name: 'Paquetería básica necesaria (moment, routerdom, immer, yup, etc)', checked: true},
             {value: ZUSTAND, name: 'Zustand', checked: true},
             {value: AXIOS, name: 'axios', checked: true},
             {value: ENVS, name: `Archivos env's`, checked: true},
