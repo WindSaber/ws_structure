@@ -1,14 +1,14 @@
 const chalk = require("chalk");
 const fse = require('fs-extra');
 
-const creaEstructuraEnvs = opciones => new Promise((resolve, reject) => {
+const creaEstructuraEnvs = (opciones, nombre_app) => new Promise((resolve, reject) => {
     //TOdo modificar el .gitignore
     console.log(chalk.cyan(`Inicia la creación de la estructura de los .env's`));
     let envs_done = 1;
     let envs = ['prod', 'qa', 'dev', 'example'];
     envs.map((env) => {
         let text = "";
-        text += getEnvStructure(env, opciones);
+        text += getEnvStructure(env, opciones, nombre_app);
         fse.outputFile(getEnvName(env), text).then(() => {
             envs_done++;
             if (envs_done === envs.length) {
@@ -35,13 +35,13 @@ const getEnvName = env => {
     return `.env.${env}`;
 }
 
-const getEnvStructure = (env, opciones) => `#Plantilla generada con ws_structure @windsaber 2022
+const getEnvStructure = (env, opciones, nombre_app) => `#Plantilla generada con ws_structure @windsaber 2022
 REACT_APP_VERSION=v1.0.0
-REACT_APP_APP_NAME=nombre_de_app
+REACT_APP_APP_NAME=${nombre_app}
 REACT_APP_BASE_NAME=/
 REACT_APP_ENV=${env}
-REACT_APP_URL_BASE=${env === 'dev' ? 'http://localhost/nombre_de_app/public' : 'http://el_dominio/api/public'}
-REACT_APP_URL_API=${env === 'dev' ? 'http://localhost/nombre_de_app/public/api' : 'http://el_dominio/api/public/api'}
+REACT_APP_URL_BASE=${env === 'dev' ? 'http://localhost/${nombre_app}/public' : 'http://el_dominio/api/public'}
+REACT_APP_URL_API=${env === 'dev' ? 'http://localhost/${nombre_app}/public/api' : 'http://el_dominio/api/public/api'}
 REACT_APP_URL_WEB=${env === 'dev' ? 'http://localhost:3000' : 'http://el_dominio'}
 `;
 

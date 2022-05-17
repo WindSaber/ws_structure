@@ -24,6 +24,7 @@ const rollback = (opciones) => {
                     await fs.remove('.env.qa');
                 }
                 await desinstalar(opciones);
+                await limpiaPackageJson(opciones);
                 console.log(chalk.green('Rollback completado'));
                 resolve();
             } catch (err) {
@@ -49,7 +50,26 @@ const desinstalar = async (opciones) => new Promise((resolve, reject) => {
         console.log(`stdout:\n${stdout}`);
         resolve();
     });
-})
+});
+
+const limpiaPackageJson = async (opciones) => new Promise(async (resolve, reject) => {
+    console.log(chalk.cyan(`Limpiando package.json`));
+    try {
+        let pkg_obj = JSON.parse(await fs.readFile('package.json', 'utf-8'));
+        let overwrite = false;
+        if (opciones.indexOf(ENVS) >= 1) {
+            overwrite = true;
+            delete pkg_obj.scripts["build:prod"];
+            delete pkg_obj.scripts["build:qa"];
+        }
+        if (overwrite)
+            await fs.outputFile('package.json', JSON.stringify(pkg_obj, null, "\t"));
+        resolve();
+    } catch (e) {
+        console.log(e);
+        reject();
+    }
+});
 
 
 module.exports = {rollback};

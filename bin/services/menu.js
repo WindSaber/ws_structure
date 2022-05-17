@@ -29,19 +29,23 @@ const getOpciones = async () => {
             {value: ANIMATE, name: 'Animate.css', checked: true},
         ];
 
-        inquirer.prompt({
-            type: 'checkbox',
-            'message': 'Seleccione las estrucuturas que voy a crear',
-            name: 'estructuras', choices,
-            validate(answer) {
-                if (answer.length == 0)
-                    console.log(chalk.red('Carnaaal, tienes que elegir al menos una opción...dame trabajo y déjame ayudarte con el tuyo.'));
-                return true;
+        inquirer.prompt([
+            {
+                type: 'checkbox',
+                'message': 'Seleccione las estrucuturas que voy a crear',
+                name: 'estructuras', choices,
+                validate(answer) {
+                    if (answer.length == 0)
+                        console.log(chalk.red('Carnaaal, tienes que elegir al menos una opción...dame trabajo y déjame ayudarte con el tuyo.'));
+                    return true;
+                }
+            },
+            {
+                type: 'text',
+                message: 'Cual es el nombre de la app ejemplo nombre_app',
+                name: 'nombre_app'
             }
-        }).then(r => {
-            //console.log(JSON.stringify(r.estructuras, null, '  '));
-            resolve(r.estructuras);
-        })
+        ]).then(r => resolve({opciones: r.estructuras, nombre_app: r.nombre_app}))
     })
 };
 
