@@ -44,8 +44,18 @@ const getOpciones = async () => {
                 type: 'text',
                 message: 'Cual es el nombre de la app ejemplo nombre_app',
                 name: 'nombre_app'
+            },
+            {
+                type: 'list',
+                message: 'Con que ambiente deseas trabajar',
+                default:'g',
+                choices: [
+                    {value: 'g', name: 'Apps internas G'},
+                    {value: 'i', name: 'Apps internas I'},
+                ],
+                name: 'ambiente'
             }
-        ]).then(r => resolve({opciones: r.estructuras, nombre_app: r.nombre_app}))
+        ]).then(r => resolve({opciones: r.estructuras, nombre_app: r.nombre_app, ambiente: r.ambiente}))
     })
 };
 
@@ -57,4 +67,6 @@ const reiniciaMenu = () => {
     })
 };
 
-module.exports = {reiniciaMenu};
+const tiene = (seed, opciones) => opciones.indexOf(seed) >= 0;
+
+module.exports = {reiniciaMenu, tiene};

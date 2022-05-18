@@ -10,14 +10,16 @@ const rollback = (opciones) => {
         inquirer.prompt({
             type: 'confirm',
             name: 'continuar',
-            message: 'Deseas hacer rollback (esta opción existe para pruebas, normalmente no querrás deshacer el trabajo que ya hice)',
+            message: 'Deseas hacer rollback (esta opción existe para pruebas, normalmente no querrás deshacer el trabajo que ya hice) IMPORTANTE: BORRO EL DIRECTORIO src',
             default: false
         }).then(async r => {
             if (!r.continuar)
                 resolve();
             try {
+                console.log(chalk.cyan(`Eliminando todo el directorio src`));
                 await fs.remove('src');
                 if (opciones.indexOf(ENVS) >= 0) {
+                    console.log(chalk.cyan(`Eliminando los envs`));
                     await fs.remove('.env.development');
                     await fs.remove('.env.example');
                     await fs.remove('.env.production');
@@ -38,6 +40,7 @@ const rollback = (opciones) => {
 }
 
 const desinstalar = async (opciones) => new Promise((resolve, reject) => {
+    console.log(chalk.cyan(`Desinstalando paquetería`));
     exec(`npm r ${getLibreriasInstalar(opciones)}`, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);

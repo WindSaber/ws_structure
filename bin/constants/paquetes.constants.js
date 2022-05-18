@@ -1,8 +1,10 @@
 const PKG_DISPONIBLES = {
+    "admin": '',
     "animate": 'animate.css',
     "axios": 'axios',
     "base": 'immer lodash moment react-icons react-number-format react-router-dom react-textarea-autosize sweetalert2 uuid yup yup-es env-cmd file-saver',
     "bootstrap": 'bootstrap react-bootstrap-typeahead',
+    "catalogos": '',
     "datepicker": '@date-io/date-fns @material-ui/core @material-ui/pickers date-fns react-datepicker',
     "envs": '',
     "helmet": 'react-helmet-async',
