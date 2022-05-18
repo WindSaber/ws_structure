@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
 const {reiniciaMenu, tiene} = require('./services/menu');
+const {creaCarpetasBase} = require('./structures/base.structure');
 const {creaEstructuraEnvs} = require('./structures/envs.structure');
 const {creaEstructuraApi} = require('./structures/api.structure');
 const {creaEstructuraIndex} = require('./structures/index.structure');
 const {creaEstructuraPackageJson} = require('./structures/packagejson.structure');
+const {crearValidadorStructure} = require('./structures/validator.structure');
 const {instalador} = require('./services/instalador');
 const {rollback} = require('./services/rollback');
 const {ENVS, AXIOS, BASE} = require('./constants/opciones.constants');
@@ -13,8 +15,11 @@ const chalk = require("chalk");
 reiniciaMenu().then(async ({opciones, nombre_app, ambiente}) => {
     try {
         await instalador(opciones);
-        if (tiene(BASE, opciones))
+        if (tiene(BASE, opciones)) {
+            await creaCarpetasBase(opciones);
             await creaEstructuraIndex(opciones);
+            await crearValidadorStructure(opciones);
+        }
         if (tiene(ENVS, opciones))
             await creaEstructuraEnvs(opciones, nombre_app);
         await creaEstructuraPackageJson(opciones, nombre_app);
